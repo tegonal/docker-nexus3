@@ -17,8 +17,8 @@ FROM centos:centos7
 LABEL name="Nexus Repository Manager" \
       maintainer="Sonatype <support@sonatype.com>" \
       vendor=Sonatype \
-      version="3.25.1-04" \
-      release="3.25.1" \
+      version="3.30.0-01" \
+      release="3.30.0" \
       url="https://sonatype.com" \
       summary="The Nexus Repository Manager server \
           with universal support for popular component formats." \
@@ -36,9 +36,9 @@ LABEL name="Nexus Repository Manager" \
       io.openshift.expose-services="8081:8081" \
       io.openshift.tags="Sonatype,Nexus,Repository Manager"
 
-ARG NEXUS_VERSION=3.25.1-04
+ARG NEXUS_VERSION=3.30.0-01
 ARG NEXUS_DOWNLOAD_URL=https://download.sonatype.com/nexus/3/nexus-${NEXUS_VERSION}-unix.tar.gz
-ARG NEXUS_DOWNLOAD_SHA256_HASH=0bfd23958a1329bb3ed36cbe6fe15efd85f9ab2ed7a3235576c2eccc9173cf2e
+ARG NEXUS_DOWNLOAD_SHA256_HASH=6b186ec3514dbadf89a92d560b1c9098fd3caa1d2d5e7f5402fcf61a3d6418fb
 
 # configure nexus runtime
 ENV SONATYPE_DIR=/opt/sonatype
